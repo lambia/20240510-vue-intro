@@ -1,12 +1,17 @@
+//Importo la funzione "createApp" dalla classe/oggettone "Vue"
 const { createApp } = Vue
 // vuol dire ===> const createApp = Vue.createApp;
 
+//Creo un oggetto con la configurazione (i dati) della mia app
 const configurazione = {
+	//l'oggetto ha una proprietà "data", che è una funzione
 	data() {
-	  return {
-		message: 'Hello Dynamic Vue World!',
-		description: "lorem ipsum dolorem sit"
-	  }
+		//La funzione restituisce un oggetto con tutti i nostri dati
+		return {
+			message: 'Hello Vue World!',
+			firstName: "",
+			lastName: ""
+		}
 	}
 };
 

@@ -7,13 +7,20 @@
 	<link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+	<!-- Importo il file di Vue.js -->
 	<script src="https://unpkg.com/vue@3.4.27/dist/vue.global.js"></script>
-
+	
+	<!-- Creo un contenitore per la mia applicazione -->
+	<!-- Tutto l'html andrà qui dentro -->
 	<div id="app">
 		<h1>{{ message }}</h1>
-		<h2>{{ description }}</h2>
+		<h2>{{ firstName }} {{ lastName }}</h2>
+
+		<input type="text" placeholder="Scrivi il tuo nome" v-model="firstName">
+		<input type="text" placeholder="Scrivi il tuo cognome" v-model="lastName">
 	</div>
 	
+	<!-- Carico il mio file js, che avvia l'applicazione -->
 	<script src="./js/main.js"></script>
 </body>
 </html>
