@@ -10,3 +10,11 @@ body {
 	font-family: sans-serif;
 	padding: 1rem;
 }
+
+.red {
+	color: crimson;
+}
+
+.orange {
+	color: goldenrod;
+}

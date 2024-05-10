@@ -8,13 +8,28 @@ const configurazione = {
 	data() {
 		//La funzione restituisce un oggetto con tutti i nostri dati
 		return {
-			message: 'Hello Vue World!',
-			firstName: "",
-			lastName: ""
+			message: 'Welcome to VueJS!',
+			firstName: "Studente",
+			lastName: "#125",
+			titleClass: "red"
+		}
+	},
+	methods: {
+		stampaMsg(questo) {
+			alert(questo);
+		},
+		cambiaColore() {
+			if(this.titleClass == "red") {
+				this.titleClass = "orange";
+			} else {
+				this.titleClass = "red";
+			}
 		}
 	}
 };
 
 let app = Vue.createApp(configurazione);
+
+console.log("applicazione inizializzata ma non montata", app);
 
 app.mount('#app');

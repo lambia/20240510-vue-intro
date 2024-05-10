@@ -13,11 +13,25 @@
 	<!-- Creo un contenitore per la mia applicazione -->
 	<!-- Tutto l'html andrà qui dentro -->
 	<div id="app">
-		<h1>{{ message }}</h1>
-		<h2>{{ firstName }} {{ lastName }}</h2>
 
+		<!-- Interpolazione data -->
+		<h1>Hello {{ firstName }} {{ lastName }}!</h1>
+
+		<!-- :proprieta per collegare un attributo html a un data -->
+		<h2 :class="titleClass">{{ message }}</h2>
+
+		<!-- v-model per collegare il value al data -->
+		<br>
 		<input type="text" placeholder="Scrivi il tuo nome" v-model="firstName">
 		<input type="text" placeholder="Scrivi il tuo cognome" v-model="lastName">
+		<br><br>
+		
+		<!-- @click per gestire l'evento di click -->
+		<button @click="stampaMsg('ciao')">Stampa cose</button>
+		<br><br>
+
+		<input type="text" v-model="titleClass">
+		<button @click="cambiaColore">Cambia colore</button>
 	</div>
 	
 	<!-- Carico il mio file js, che avvia l'applicazione -->
